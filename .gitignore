@@ -3,3 +3,4 @@
 
 # mkdocs site directory
 site/
+.cache/
