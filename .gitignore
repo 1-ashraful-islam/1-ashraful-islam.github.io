@@ -1,0 +1,5 @@
+# python environments
+.venv
+
+# mkdocs site directory
+site/
