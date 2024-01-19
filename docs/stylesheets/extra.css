@@ -1,0 +1,32 @@
+.youtube {
+  color: #EE0F0F;
+}
+
+.linkedIn {
+  color: #fff;
+}
+
+.x-twitter {
+  color: #fff;
+}
+
+.github {
+  color: #fff;
+}
+
+.announcement-link {
+  color: #fff !important;
+}
+
+
+@keyframes heart {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.heart {
+  animation: heart 1000ms infinite;
+}

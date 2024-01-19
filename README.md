@@ -5,3 +5,8 @@
 # Setup:
 
 See getting started with [Mkdocs](https://squidfunk.github.io/mkdocs-material/getting-started/) to generate static site.
+
+
+# Optional Plugins for Mkdocs:
+ - https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin.git
+ - https://github.com/byrnereese/mkdocs-minify-plugin.git
