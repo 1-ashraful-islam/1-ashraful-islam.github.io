@@ -1,5 +1,8 @@
 site_name: Ashraful Islam
 site_url: https://1-ashraful-islam.github.io
+site_description: >-
+  Ashraful Islam is a software engineer. He is a passionate learner. He loves to learn new
+  technologies and share his knowledge with others.
 copyright: >
   Copyright &copy; 2024 Ashraful Islam -
   <a href="#__consent">Change cookie settings</a>
@@ -15,9 +18,11 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
     - search.share
+    - announce.dismiss
   palette:
 
     # Palette toggle for automatic mode
@@ -43,8 +48,34 @@ plugins:
   - social
   - privacy
   - search
+  - blog
+  - rss:
+      enabled: !ENV [CI, false]
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
 
 extra:
+  social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/1-ashraful-islam
+        name: See my projects on GitHub
+      - icon: fontawesome/brands/linkedin
+        link: https://linkedin.com/in/1-ashraful-islam
+        name: Connect with me on LinkedIn
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/a__islam
+        name: Follow me on Twitter
+      
   analytics:
       provider: google
       property: G-73LKLZCSB2
