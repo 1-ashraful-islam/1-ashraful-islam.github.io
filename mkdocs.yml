@@ -4,6 +4,9 @@ site_url: https://1-ashraful-islam.github.io
 site_description: >-
   Ashraful Islam is a software engineer. He is a passionate learner. He loves to learn new
   technologies and share his knowledge with others.
+
+# edit_uri: edit/main/docs/
+# repo_url: https://github.com/1-ashraful-islam/1-ashraful-islam.github.io
 copyright: >
   Copyright &copy; 2024 Ashraful Islam -
   <a href="#__consent">Change cookie settings</a>
@@ -73,6 +76,14 @@ markdown_extensions:
   - md_in_html
   - tables
   - footnotes
+  - toc:
+      permalink: true
+      title: On this page
+      permalink_title: Anchor link to this section for reference
+      toc_depth: 3
+      # slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #   kwds:
+      #     case: lower
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
