@@ -1,15 +1,13 @@
-var windowWidth = window.innerWidth;
-var windowHeight = window.innerHeight;
-
-var maze_window = null;
-
+const maze_canvas = document.getElementById('myCanvas');
+const maze_ctx = maze_canvas.getContext('2d');
 
 class MazeWindow {
   constructor(width, height, background = "#ccc") {
     this.width = width;
     this.height = height;
     this.background = background;
-    this.canvas = document.getElementById('myCanvas');
+    this.canvas = maze_canvas;
+    this.ctx = maze_ctx;
     
     this.canvas.style.background = this.background;
     this.isRunning = false;
@@ -18,19 +16,28 @@ class MazeWindow {
 
     // Parameters for maze generation
 
-    this.numCols = 12;
-    this.numRows = 10;
-
-
-    this.padding = 50;
-    this.seed = null;
-    this.cellWidth = (width - 2 * this.padding) / this.numCols;
-    this.cellHeight = (height - 2 * this.padding) / this.numRows;
-
     this.mazeProcessing = false;
-    maze_window = this;
+    
     // Initial Maze creation
     this.generateMaze();
+  }
+
+  calculate_maze_parameters() {
+    this.padding = 15;
+    this.seed = null;
+ 
+    const numColumnsInput = document.getElementById('numColumns');
+    const numRowsInput = document.getElementById('numRows');
+    this.numCols = parseInt(numColumnsInput.value) || 12; // default value of 12 if not retrieved
+    this.numRows = parseInt(numRowsInput.value) || 10; // default value of 10 if not retrieved
+    if (this.numCols < 2 || this.numCols > 16 || this.numRows < 2 || this.numRows > 16 || isNaN(this.numCols) || isNaN(this.numRows)) {
+      alert("Invalid number of rows or columns. Use 2-16 columns and 2-16 rows.");
+      return;
+    }
+    this.cellWidth = (this.width - 2 * this.padding) / this.numCols;
+    this.cellHeight = (this.height - 2 * this.padding) / this.numRows;
+    console.log("Calulated maze parameters: ", this.numCols, this.numRows, this.cellWidth, this.cellHeight)
+
   }
 
   createButtons() {
@@ -41,7 +48,7 @@ class MazeWindow {
     stopButton.addEventListener('click', () => this.stop());
 
     const solveButton = document.getElementById('solveButton');
-    solveButton.addEventListener('click', () => this.solveMaze(solveButton));
+    solveButton.addEventListener('click', () => this.solveMaze());
 
     const generateButton = document.getElementById('mazeGenerate');
     generateButton.addEventListener('click', () => this.generateMaze());
@@ -53,37 +60,20 @@ class MazeWindow {
   }
 
   generateMaze() {
-
-    this.width = this.canvas.getAttribute('width');
-    this.height = this.canvas.getAttribute('height');
     this.stop();
-    const numColumnsInput = document.getElementById('numColumns');
-    const numRowsInput = document.getElementById('numRows');
-    this.numCols = parseInt(numColumnsInput.value) || 12; // default value of 12 if not retrieved
-    this.numRows = parseInt(numRowsInput.value) || 10; // default value of 10 if not retrieved
-    if (this.numCols < 2 || this.numCols > 16 || this.numRows < 2 || this.numRows > 16 || isNaN(this.numCols) || isNaN(this.numRows)) {
-      alert("Invalid number of rows or columns. Use 2-16 columns and 2-16 rows.");
-      return;
-    }
-    this.cellWidth = (this.width - 2 * this.padding) / this.numCols;
-    this.cellHeight = (this.height - 2 * this.padding) / this.numRows;
+
+    let { canvasWidth, canvasHeight } = prepare_canvas();
+    this.width = canvasWidth;
+    this.height = canvasHeight;
     this.createMaze();
   }
 
   async createMaze() {
     
-
-    if (this.mazeProcessing) {
-      this.mazeProcessing = false;
-      this.maze.stop();
-    }
+    this.calculate_maze_parameters();
     // Clear the canvas
     this.clearCanvas();
 
-    // disable solve button
-    const solveButton = document.getElementById('solveButton');
-    solveButton.disabled = true;
-    solveButton.innerHTML = "Solve (wait...)";
 
     this.mazeProcessing = true;
     // Assuming Maze is a class you have defined in maze.js
@@ -91,101 +81,59 @@ class MazeWindow {
                          this.cellWidth, this.cellHeight, this, this.seed);
     
     await this.maze.createCells();
-
-    // enable solve button
-    solveButton.disabled = false;
-    solveButton.innerHTML = "Solve";
-  
+    
     // this.maze.solve();
     this.mazeProcessing = false;
 
     if (this.autoSolve) {
-      this.solveMaze(solveButton);
+      this.solveMaze();
     }
   }
 
-  solveMaze(solveButton) {
-    solveButton.disabled = true;
-    solveButton.innerHTML = "Solving...";
-    this.maze.solve();
-    solveButton.disabled = false;
-    solveButton.innerHTML = "Solve";
+  solveMaze() {
+    
+    if (this.maze) {
+      this.maze.solve();
+    }
+
   }
 
   clearCanvas() {
-    const ctx = this.canvas.getContext('2d');
-    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    maze_ctx.clearRect(0, 0, maze_canvas.width, maze_canvas.height);
   }
 
   stop() {
-    if (this.mazeProcessing) {
+    if (this.maze) {
       this.maze.stop();
       this.mazeProcessing = false;
     }
   }
 
   drawLine(line, fillColor = "black") {
-    line.draw(this.canvas.getContext('2d'), fillColor);
+    line.draw(maze_ctx, fillColor);
   }
 
   getCanvas() {
-    return this.canvas;
+    return maze_canvas;
   }
 }
-function resizeCanvas() {
-  const canvas = document.getElementById('myCanvas');
-  const windowNewWidth = window.innerWidth;
-  const windowNewHeight = window.innerHeight;
-  if (windowNewWidth == windowWidth && windowNewHeight == windowHeight) {
-    return;
-  }
 
-  maze_window.stop();
+function prepare_canvas() {
 
+  // Initial resize
+  maze_canvas.width = Math.min(window.innerWidth, window.innerHeight, 800) - 50;
+  maze_canvas.height = maze_canvas.width * 3 / 4;
+  let canvasWidth = maze_canvas.width;
+  let canvasHeight = maze_canvas.height;
 
-  windowWidth = windowNewWidth;
-  windowHeight = windowNewHeight;
-  // Save the current canvas content as an image
-  // var imageData = canvas.toDataURL();
-
-  // Resize the canvas
-  canvas.width = Math.min(windowWidth, windowHeight, 800) - 50;
-  canvas.height = canvas.width * 3 / 4;
-
-
-  // Get the 2D context of the canvas
-  var ctx = canvas.getContext('2d');
-  // Clear the canvas
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Set the font size and style
-  ctx.font = '20px Arial';
-
-  // Set the text alignment to center
-  ctx.textAlign = 'center';
-
-  // Set the fill color
-  ctx.fillStyle = 'black';
-
-  // Display the text in the middle of the canvas
-  ctx.fillText('Window was resized!', canvas.width / 2, canvas.height / 2 - 20);
-
-  ctx.fillText('Press generate to start maze again!', canvas.width / 2, canvas.height / 2 + 20);
-  
+  return {canvasWidth, canvasHeight};
 }
 
 // Main execution
 function main() {
-  window.addEventListener('resize', resizeCanvas, false);
 
-  const canvas = document.getElementById('myCanvas');
-  // Initial resize
-  canvas.width = Math.min(windowWidth, windowHeight, 800) - 50;
-  canvas.height = canvas.width * 3 / 4;
-
-  const width = window.innerWidth - 50;
-  const height = width*3/4;
-  const maze_window = new MazeWindow(width, height);
+  let { canvasWidth, canvasHeight } = prepare_canvas();
+  const maze_window = new MazeWindow(canvasWidth, canvasHeight);
   maze_window.isRunning = true;
 }
 

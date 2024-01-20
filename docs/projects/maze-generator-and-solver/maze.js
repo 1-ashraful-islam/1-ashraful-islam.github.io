@@ -207,6 +207,9 @@ class Maze {
   solve() {
     this.resetCellsVisited();
     this.restoreCanvas();
+    if (this.start === null || this.end === null) {
+      return;
+    }
     return this.solveRecursive(this.start[0], this.start[1]);
   }
 
