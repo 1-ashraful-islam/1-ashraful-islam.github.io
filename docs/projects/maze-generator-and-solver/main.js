@@ -1,3 +1,9 @@
+var windowWidth = window.innerWidth;
+var windowHeight = window.innerHeight;
+
+var maze_window = null;
+
+
 class MazeWindow {
   constructor(width, height, background = "#ccc") {
     this.width = width;
@@ -22,6 +28,7 @@ class MazeWindow {
     this.cellHeight = (height - 2 * this.padding) / this.numRows;
 
     this.mazeProcessing = false;
+    maze_window = this;
     // Initial Maze creation
     this.generateMaze();
   }
@@ -82,6 +89,7 @@ class MazeWindow {
     // Assuming Maze is a class you have defined in maze.js
     this.maze = new Maze(this.padding, this.padding, this.numRows, this.numCols,
                          this.cellWidth, this.cellHeight, this, this.seed);
+    
     await this.maze.createCells();
 
     // enable solve button
@@ -112,6 +120,7 @@ class MazeWindow {
   stop() {
     if (this.mazeProcessing) {
       this.maze.stop();
+      this.mazeProcessing = false;
     }
   }
 
@@ -125,16 +134,54 @@ class MazeWindow {
 }
 function resizeCanvas() {
   const canvas = document.getElementById('myCanvas');
-  canvas.width = Math.min(window.innerWidth, window.innerHeight, 800) - 50;
-  canvas.height = canvas.width*3/4;
+  const windowNewWidth = window.innerWidth;
+  const windowNewHeight = window.innerHeight;
+  if (windowNewWidth == windowWidth && windowNewHeight == windowHeight) {
+    return;
+  }
+
+  maze_window.stop();
+
+
+  windowWidth = windowNewWidth;
+  windowHeight = windowNewHeight;
+  // Save the current canvas content as an image
+  // var imageData = canvas.toDataURL();
+
+  // Resize the canvas
+  canvas.width = Math.min(windowWidth, windowHeight, 800) - 50;
+  canvas.height = canvas.width * 3 / 4;
+
+
+  // Get the 2D context of the canvas
+  var ctx = canvas.getContext('2d');
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Set the font size and style
+  ctx.font = '20px Arial';
+
+  // Set the text alignment to center
+  ctx.textAlign = 'center';
+
+  // Set the fill color
+  ctx.fillStyle = 'black';
+
+  // Display the text in the middle of the canvas
+  ctx.fillText('Window was resized!', canvas.width / 2, canvas.height / 2 - 20);
+
+  ctx.fillText('Press generate to start maze again!', canvas.width / 2, canvas.height / 2 + 20);
   
 }
 
 // Main execution
 function main() {
   window.addEventListener('resize', resizeCanvas, false);
+
+  const canvas = document.getElementById('myCanvas');
   // Initial resize
-  resizeCanvas();
+  canvas.width = Math.min(windowWidth, windowHeight, 800) - 50;
+  canvas.height = canvas.width * 3 / 4;
 
   const width = window.innerWidth - 50;
   const height = width*3/4;
