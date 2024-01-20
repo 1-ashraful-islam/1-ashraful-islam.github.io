@@ -21,6 +21,7 @@
     </div>
   </div>
 
+
 <script src="gprimitives.js"></script>
 <script src="maze.js"></script>
 <script src="main.js"></script>

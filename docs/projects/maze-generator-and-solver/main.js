@@ -1,17 +1,16 @@
-class Window {
+class MazeWindow {
   constructor(width, height, background = "#ccc") {
     this.width = width;
     this.height = height;
     this.background = background;
     this.canvas = document.getElementById('myCanvas');
+    
     this.canvas.style.background = this.background;
     this.isRunning = false;
     this.createButtons();
     this.autoSolve = true; //true by default
 
     // Parameters for maze generation
-    
-    
 
     this.numCols = 12;
     this.numRows = 10;
@@ -24,12 +23,12 @@ class Window {
 
     this.mazeProcessing = false;
     // Initial Maze creation
-    this.createMaze();
+    this.generateMaze();
   }
 
   createButtons() {
     const resetButton = document.getElementById('resetButton');
-    resetButton.addEventListener('click', () => this.createMaze());
+    resetButton.addEventListener('click', () => this.generateMaze());
 
     const stopButton = document.getElementById('stopButton');
     stopButton.addEventListener('click', () => this.stop());
@@ -48,8 +47,9 @@ class Window {
 
   generateMaze() {
 
+    this.width = this.canvas.getAttribute('width');
+    this.height = this.canvas.getAttribute('height');
     this.stop();
-
     const numColumnsInput = document.getElementById('numColumns');
     const numRowsInput = document.getElementById('numRows');
     this.numCols = parseInt(numColumnsInput.value) || 12; // default value of 12 if not retrieved
@@ -123,13 +123,23 @@ class Window {
     return this.canvas;
   }
 }
+function resizeCanvas() {
+  const canvas = document.getElementById('myCanvas');
+  canvas.width = Math.min(window.innerWidth, window.innerHeight, 800) - 50;
+  canvas.height = canvas.width*3/4;
+  
+}
 
 // Main execution
 function main() {
-  const width = 800;
-  const height = 600;
-  const window = new Window(width, height);
-  window.isRunning = true;
+  window.addEventListener('resize', resizeCanvas, false);
+  // Initial resize
+  resizeCanvas();
+
+  const width = window.innerWidth - 50;
+  const height = width*3/4;
+  const maze_window = new MazeWindow(width, height);
+  maze_window.isRunning = true;
 }
 
 main();
