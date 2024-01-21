@@ -1,6 +1,10 @@
+---
+title: Projects
+---
+
 # Projects
 
-Here are the things I have been working on recently:
+Here are some of the things I have been working on recently:
 
 <div class="grid cards" markdown>
 

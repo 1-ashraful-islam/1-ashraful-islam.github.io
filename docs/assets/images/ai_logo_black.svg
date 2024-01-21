@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="108.42951mm"
+   height="108.42951mm"
+   viewBox="0 0 108.42951 108.42951"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="ai_logo_black.svg"
+   inkscape:export-filename="/Users/ashraful/OneDrive - University of Nebraska-Lincoln/PersonalStuff/ai_logo_black.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="53.551033"
+     inkscape:cy="152.83453"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g874"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1252"
+     inkscape:window-height="755"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-89.83917,-114.76379)">
+    <g
+       id="g874"
+       style="display:inline">
+      <circle
+         inkscape:export-ydpi="300"
+         inkscape:export-xdpi="300"
+         r="53.802677"
+         cy="168.97855"
+         cx="144.05392"
+         id="path880-8"
+         style="display:inline;opacity:1;fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.824154;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         inkscape:export-ydpi="300"
+         inkscape:export-xdpi="300"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.79375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path880"
+         cx="144.05392"
+         cy="168.97855"
+         r="51.817883" />
+      <g
+         id="g878"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="translate(-4.4646086,17.46898)"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 180.00602,112.85456 -14.633,14.633 v 13.89802 l 14.66641,-14.66642 z m -14.43255,31.07008 v 46.23763 h 14.29892 v -60.67018 z"
+           id="path30" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 163.43531,129.49208 -46.43807,46.43808 v 14.23211 L 136.4745,170.685 h 26.96081 v -9.92238 H 146.4637 L 163.43531,143.791 Z"
+           id="path32" />
+      </g>
+    </g>
+    <circle
+       style="opacity:0;fill:#fffdff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.305876"
+       id="path34"
+       cx="148.33458"
+       cy="151.27457"
+       r="53.453907" />
+  </g>
+</svg>
