@@ -54,4 +54,28 @@
       /* margin-left: 2rem; */
       margin-left: 0.25rem;
     }
+    @media (max-width: 600px) {
+        #mazeSize {
+            padding: 2px; 
+            font-weight: bold;
+        }
+        #mazeSize > div {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        #mazeSize input {
+            width: 3rem;
+        }
+        #maze-autoSolve {
+            margin-left: 1.2rem;
+        }
+        #mazeSolve > button {
+            margin-left: 0.05rem;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+        #mazeSolve > {
+            display: inline-block;
+        }
+    }
 </style>
