@@ -45,3 +45,10 @@
   height: 48px;
   width: 48px;
 }
+
+/* put back to top button near the bottom of screen */
+.md-top {
+  top: 80vh !important;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
