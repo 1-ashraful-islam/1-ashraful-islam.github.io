@@ -38,6 +38,7 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - header.autohide
+    - toc.integrate
   palette:
 
     # Palette toggle for automatic mode
@@ -146,34 +147,34 @@ extra:
         link: https://twitter.com/a__islam
         name: Follow me on Twitter
       
-  analytics:
-      provider: google
-      property: G-73LKLZCSB2
-      feedback:
-        title: Was this page helpful?
-        ratings:
-          - icon: material/emoticon-happy-outline
-            name: This page was helpful
-            data: 1
-            note: >-
-              Thanks for your feedback!
-          - icon: material/emoticon-sad-outline
-            name: This page could be improved
-            data: 0
-            note: >- 
-              Thanks for your feedback! Help us improve this page by
-              using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-  consent:
-    title: Cookie consent
-    description: >- 
-      The cookies are used to recognize your repeated visits and save your preferences, as well
-      as to measure the effectiveness of the website content and whether users
-      find what they're searching for. With your consent, you're helping to
-      make the website serve your better.
-    actions:
-      - accept
-      - reject
-      - manage
+  # analytics:
+  #     provider: google
+  #     property: G-73LKLZCSB2
+  #     feedback:
+  #       title: Was this page helpful?
+  #       ratings:
+  #         - icon: material/emoticon-happy-outline
+  #           name: This page was helpful
+  #           data: 1
+  #           note: >-
+  #             Thanks for your feedback!
+  #         - icon: material/emoticon-sad-outline
+  #           name: This page could be improved
+  #           data: 0
+  #           note: >- 
+  #             Thanks for your feedback! Help us improve this page by
+  #             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     The cookies are used to recognize your repeated visits and save your preferences, as well
+  #     as to measure the effectiveness of the website content and whether users
+  #     find what they're searching for. With your consent, you're helping to
+  #     make the website serve your better.
+  #   actions:
+  #     - accept
+  #     - reject
+  #     - manage
 
 # include folders outside docs that should trigger a reload
 watch:

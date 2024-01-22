@@ -1,5 +1,8 @@
-# Maze Solver
+# Maze Generator and Solver 
 
+Try the Maze generator, read more about it [below](#project-description), or check the code in [github repo](https://github.com/1-ashraful-islam/boot.dev-projects).
+
+## Interactive Demo
 <div id="mazeApp">
   <canvas id="myCanvas" width="800" height="600"></canvas>
 </div>
@@ -79,3 +82,59 @@
         }
     }
 </style>
+
+## Project Description
+The objective of the project is to create a maze and solve it. This is a semi-guided project from boot.dev backend developer course. Although the original project was to create the maze using Python and Tkinter - after I created the python version, I converted the python codes to javascript and HTML5 using GPT-4's assistance so that it can also run in the browser. Code for both versions are available in the [github repo](https://github.com/1-ashraful-islam/boot.dev-projects).
+
+## Program Breakdown
+
+First, a set of cells are drawn on a canvas based on number of rows and columns selected. Then using depth first algorithm, starting from the start position, walls are knocked down from connecting neighboring cells to create the maze. Finally, using depth first search algorith, the maze is solved.
+
+A small delay is added between each move to make the animations play out. Without the delay the maze appears generated and solved almost instantly.
+
+## Class Diagram
+
+Here's a simplified class diagram of the program. Checkout the github repo for the full class diagram.
+
+```mermaid
+classDiagram
+    class Maze {
+        -Array Cells
+    }
+
+    class MazeWindow {
+        -Canvas canvas
+        -Maze maze
+    }
+
+    class Cell {
+        -boolean visited
+        -Canvas canvas
+    }
+
+    class Point {
+    }
+
+    class Line {
+    }
+
+    MazeWindow --> Maze: contains
+    Cell --> Line: uses
+    Cell --> Point: uses
+
+```
+
+## Challenges and Solutions
+The order of directions chosen during depth first algorithm can change how many steps are required to solve the maze based on where the "start" and "finish" are located. Original project uses the top-left cell as start and bottom-left as end. This means if you select the order "bottom, right, left, up" for the directions, the maze will be solved in the least number of steps. These steps can be reordered to make a very inefficient solving algorithm.
+
+To make things interesting for the depth first algorithm, I added randomness so that "start" is slected to be anywhere on the perimeter of the maze and "finish" is selected to be anywhere on the perimter that is at least number of (cell+row)/2 away. Press reset and generate the maze a few times to see this in action!
+
+## Project Impact and Learning outcomes
+This project was fun and I learned a lot in the process. This was the first time I have used Tkinter. I learned how to use the GUI library to create a simple interactive application using python. Afterwards, as I converted the python codes to javascript, I learned how to use HTML5 canvas to create a similar interactive application that can run in the browser. Since my javascript is rusty, I also learned a lot about javascript programming in the process. Having GPT-4 as assistant definitely helped a great deal in the conversion process.
+  
+
+## Future Extensions
+- [x] Add emojis to make it more exciting
+- [ ] Add a counter to see how many steps it took to solve the maze
+- [ ] Add options to change the order of directions chosen during depth first algorithm
+- [ ] Add breadth first and A* search algorithms to solve the maze
