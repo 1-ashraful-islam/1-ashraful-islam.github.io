@@ -6,6 +6,12 @@
 
 See getting started with [Mkdocs](https://squidfunk.github.io/mkdocs-material/getting-started/) to generate static site.
 
+# Preview as you write:
+  
+  ```bash
+  mkdocs serve
+  ```
+
 
 # Optional Plugins for Mkdocs:
  - https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin.git

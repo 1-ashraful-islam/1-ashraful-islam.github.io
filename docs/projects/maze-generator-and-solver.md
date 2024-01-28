@@ -1,3 +1,7 @@
+---
+title: Maze Generator and Solver
+date: 2024-01-20
+---
 # Maze Generator and Solver 
 
 Try the Maze generator, read more about it [below](#project-description), or check the code in [github repo](https://github.com/1-ashraful-islam/boot.dev-projects).
