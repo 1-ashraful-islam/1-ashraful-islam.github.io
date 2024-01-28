@@ -191,7 +191,7 @@ nav:
     - blog/index.md
   - Projects:
     - projects/index.md
-    - Web Crawler: projects/web-crawler.md
+    # - Web Crawler: projects/web-crawler.md
     - Maze Generator and Solver: projects/maze-generator-and-solver.md
     - Pong War: projects/pong-war.md
     
