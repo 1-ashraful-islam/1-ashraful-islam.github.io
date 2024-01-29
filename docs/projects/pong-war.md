@@ -67,7 +67,7 @@ title: Pong Wars - Yin Yang Edition
       <div id="score"></div>
       <p id="made">
         made by <a href="https://1-ashraful-islam.github.io">Ashraful Islam</a>  (source :
-        <a href="https://github.com/1-ashraful-islam/weekend-projects/pong-wars">github)</a>
+        <a href="https://github.com/1-ashraful-islam/weekend-projects/tree/main/pong-wars">github)</a>
         ||| Original: <a href="https://koenvangilst.nl">Koen van Gilst</a>  (source :
         <a href="https://github.com/vnglst/pong-wars">github)</a>
       </p>
