@@ -16,14 +16,26 @@ theme:
   custom_dir: overrides
   logo: assets/images/ai_logo_white_small.svg
   favicon: assets/images/favicon.ico
-  # icon:
+  icon:
+    tag:
+      default: fontawesome/solid/code
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+      python: fontawesome/brands/python
+      html5-canvas: fontawesome/brands/html5
+      tkinter: fontawesome/brands/python
+      go: fontawesome/brands/golang
+      java: fontawesome/brands/java
+      cpp: simple/cplusplus
+      
   #   logo: logo
   features:
     # - navigation.instant
     # - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.sections
     # - navigation.expand
     - navigation.top
@@ -39,6 +51,7 @@ theme:
     - content.tabs.link
     - header.autohide
     - toc.integrate
+    - toc.follow
   palette:
 
     # Palette toggle for automatic mode
@@ -63,6 +76,8 @@ theme:
 plugins:
   - social
   - privacy
+  - tags:
+      tags_file: tags.md
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - minify:
@@ -149,6 +164,17 @@ extra:
       - icon: fontawesome/brands/twitter
         link: https://twitter.com/a__islam
         name: Follow me on Twitter
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+    Python: python
+    C++: cpp
+    HTML5 Canvas: html5-canvas
+    Python Tkinter: tkinter
+    Go: go
+    Java: java
+
       
   # analytics:
   #     provider: google
@@ -193,6 +219,8 @@ nav:
     - projects/index.md
     # - Web Crawler: projects/web-crawler.md
     - Maze Generator and Solver: projects/maze-generator-and-solver.md
-    - Pong War: projects/pong-war.md
+    - Weekend Projects:
+      - Pong Wars - Yin Yang Edition: projects/pong-war.md
+  - Tags: tags.md
     
 

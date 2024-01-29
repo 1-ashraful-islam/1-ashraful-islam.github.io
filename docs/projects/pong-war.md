@@ -1,5 +1,8 @@
 ---
 title: Pong Wars - Yin Yang Edition
+tags:
+  - JavaScript
+  - HTML5 Canvas
 ---
 <!-- # Pong Wars - Yin Yang Edition -->
 <style>
