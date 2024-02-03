@@ -28,6 +28,7 @@ theme:
       go: fontawesome/brands/golang
       java: fontawesome/brands/java
       cpp: simple/cplusplus
+      nodejs: fontawesome/brands/node-js
       
   #   logo: logo
   features:
@@ -174,6 +175,7 @@ extra:
     Python Tkinter: tkinter
     Go: go
     Java: java
+    Node.js: nodejs
 
       
   # analytics:
@@ -217,8 +219,8 @@ nav:
     - blog/index.md
   - Projects:
     - projects/index.md
-    # - Web Crawler: projects/web-crawler.md
     - Maze Generator and Solver: projects/maze-generator-and-solver.md
+    - Web Crawler: projects/web-crawler.md
     - Weekend Projects:
       - Pong Wars - Yin Yang Edition: projects/pong-war.md
   - Tags: tags.md
