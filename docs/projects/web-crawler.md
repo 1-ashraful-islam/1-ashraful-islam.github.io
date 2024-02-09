@@ -23,7 +23,7 @@ Page,Visits
 ```
 
 Following is an example of the generated image:
-![Example image](output-graph.png)
+![Example image](web-crawler/output-graph.png)
 
 ## Impacts
 
@@ -45,4 +45,4 @@ The project requires a website to be live and accessible to the crawler. It cann
 Another limitation is that if the website have a lot of dynamic content it may produce some false positive. One of the issues I ran into was when crawling `facebook.com` some links would start appending `/help` indefinitely (1). I added a depth check to prevent this behavior but it is not a perfect solution.
 { .annotate }
 
-1. ![Alt text](fb-issue.png)
+1. ![Alt text](web-crawler/fb-issue.png)

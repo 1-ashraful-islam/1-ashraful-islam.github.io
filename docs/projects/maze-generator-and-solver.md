@@ -9,6 +9,8 @@ tags:
   - HTML5 Canvas
 ---
 
+Check the source code in [:material-github: github repo](https://github.com/1-ashraful-islam/boot.dev-projects) or [Read More :material-arrow-down-box:](#project-description).
+
 <div id="mazeApp">
   <canvas id="myCanvas" width="800" height="600"></canvas>
 </div>
@@ -43,8 +45,8 @@ tags:
         /* flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 10px; */   
-        padding: 5px; 
+        padding: 10px; */
+        padding: 5px;
         font-weight: bold;
     }
     #mazeSize > div {
@@ -65,7 +67,7 @@ tags:
     }
     @media (max-width: 600px) {
         #mazeSize {
-            padding: 2px; 
+            padding: 2px;
             font-weight: bold;
         }
         #mazeSize > div {
@@ -88,8 +90,6 @@ tags:
         }
     }
 </style>
-
-Check the source code in [:material-github: github repo](https://github.com/1-ashraful-islam/boot.dev-projects).
 
 ## Project Description
 
