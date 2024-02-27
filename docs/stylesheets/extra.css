@@ -68,9 +68,35 @@
   height: 100%;
 }
 
-.figCaption {
-  display: block;
-  margin-top: 0.5em;
-  font-size: 0.8em;
-  color: gray;
+.md-content__inner {
+  display: grid; /* This hack enables ordering of elements */
+}
+
+.cover-image {
+  order: -1; /* This hack moves it above the title, need to set display: grid*/
+  display: grid;
+  width: 75%;
+  margin: 0 auto;
+
+  em {
+    font-size: 0.8em;
+    text-align: center;
+    color: gray;
+  }
+}
+
+.md-post--excerpt .cover-image {
+  width: 20%;
+  float: left;
+  margin: 0 1em 1em 0;
+
+  em {
+    display: none;
+  }
+}
+
+.md-post--excerpt::after {
+  content: "";
+  display: table;
+  clear: both;
 }

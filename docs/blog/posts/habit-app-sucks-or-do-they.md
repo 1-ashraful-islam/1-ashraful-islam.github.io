@@ -3,16 +3,20 @@ title: Why habit apps suck, or do they?
 description: In this reflective narrative, the author shares their journey of using a habit-tracking app to enhance productivity. They detail their initial strategy of breaking tasks into small, manageable chunks, the decision to switch to a new tracking format, and the subsequent challenges faced. Through personal insights, the author explores the importance of maintaining motivation and the lessons learned from their experience.
 date: 2024-02-27
 draft: false
-comments: true
 tags:
   - reflection
   - productiviy
 ---
+![Image showing a path with lot of turns](assets/images/path-of-habit.png)
+*Image created by OpenAI's DALL·E*
+{.cover-image}
 
 I started using a habit-tracking app to keep my goals in check, and it was going great for the first five weeks. Then, I decided to tweak my strategy, thinking it would enhance my productivity. Fast forward three weeks, and I haven't opened the app since.
 
 So, what exactly went south? Here's a quick dive into my experience.
 
+
+<!-- more -->
 ## Initial Strategy: Embracing Small Wins
 
 At the outset, I had a pretty straightforward approach: break down my tasks into bite-sized chunks. I laid out how many hours I aimed to dedicate to each goal weekly and split it into specific durations and frequencies. My initial setup looked something like this:
