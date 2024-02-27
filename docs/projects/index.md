@@ -13,7 +13,6 @@ Here are some of the things I have been working on recently:
 [Web Crawler]: web-crawler.md
 [Maze Solver]: maze-generator-and-solver.md
 
-
 ## Weekend Projects
 
 Some of the smaller projects that I have indulged in during the weekends:

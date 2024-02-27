@@ -76,7 +76,11 @@ theme:
         name: Switch to system preference
 plugins:
   - social
-  - privacy
+  - privacy:
+      assets: false
+      # assets_exclude: 
+      #   - cdn.jsdelivr.net/npm/mathjax@3/* 
+      #   - giscus.app/*
   - tags:
       tags_file: tags.md
   - search:
