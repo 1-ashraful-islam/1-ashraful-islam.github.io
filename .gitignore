@@ -4,3 +4,6 @@
 # mkdocs site directory
 site/
 .cache/
+
+# obsidian
+.obsidian/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g class="layer" transform="matrix(1, 0, 0, 1, 53.633094787597656, 101.03511047363281)">
+    <title>Layer 1</title>
+    <g fill="#ffffff" id="g878" stroke="#000000" stroke-miterlimit="4" stroke-width="0.79">
+      <path d="M 82 25 L 82 40 L 100 25 L 100 10 L 82 25 Z" fill="#000000" id="path30" stroke="#ffffff" stroke-width="0"/>
+      <path d="M 82 48 L 82 100 L 100 100.16 L 100 33 L 82 48 Z" fill="#000000" id="path30" stroke="#ffffff" stroke-width="0"/>
+      <path d="m76,30l-66,55l0,15l24,-20l42,0l0,-10l-30,0l30,-25l0,-15z" fill="#000000" id="path32" stroke="#000000" stroke-width="0"/>
+    </g>
+  </g>
+</svg>
