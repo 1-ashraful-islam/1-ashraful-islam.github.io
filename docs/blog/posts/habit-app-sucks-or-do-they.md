@@ -3,6 +3,7 @@ title: Why habit apps suck, or do they?
 description: In this reflective narrative, the author shares their journey of using a habit-tracking app to enhance productivity. They detail their initial strategy of breaking tasks into small, manageable chunks, the decision to switch to a new tracking format, and the subsequent challenges faced. Through personal insights, the author explores the importance of maintaining motivation and the lessons learned from their experience.
 date: 2024-02-27
 draft: false
+comments: true
 tags:
   - reflection
   - productiviy
