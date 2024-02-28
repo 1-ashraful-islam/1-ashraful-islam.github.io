@@ -5,9 +5,10 @@ date: 2024-02-27
 draft: false
 comments: true
 tags:
-  - reflection
+  - Reflection
   - productiviy
 ---
+
 ![Image showing a path with lot of turns](assets/images/path-of-habit.png)
 *Image created by OpenAI's DALL·E*
 {.cover-image}
@@ -16,8 +17,8 @@ I started using a habit-tracking app to keep my goals in check, and it was going
 
 So, what exactly went south? Here's a quick dive into my experience.
 
-
 <!-- more -->
+
 ## Initial Strategy: Embracing Small Wins
 
 At the outset, I had a pretty straightforward approach: break down my tasks into bite-sized chunks. I laid out how many hours I aimed to dedicate to each goal weekly and split it into specific durations and frequencies. My initial setup looked something like this:
@@ -44,4 +45,7 @@ Gradually, I found myself avoiding logging my hours in the app. This didn't mean
 
 ## Key Takeaways: Lessons Learned
 
-Here's what I learned from this experience -  breaking down tasks into smaller chunks is key, even when the goals are more abstract, like learning a new language. When you bundle tasks into larger blocks, it's tough to maintain motivation.
+Here's what I learned from this experience - breaking down tasks into smaller chunks is key, even when the goals are more abstract, like learning a new language. When you bundle tasks into larger blocks, it's tough to maintain motivation.
+
+!!! question "What works for you?"
+    I'd love to hear your thoughts and experiences with habit-tracking apps.

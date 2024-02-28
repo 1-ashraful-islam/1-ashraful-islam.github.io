@@ -8,8 +8,8 @@ site_description: >-
 # edit_uri: edit/main/docs/
 # repo_url: https://github.com/1-ashraful-islam/1-ashraful-islam.github.io
 copyright: >
-  Copyright &copy; 2024 Ashraful Islam -
-  <a href="#__consent">Change cookie settings</a>
+  Copyright &copy; 2024 Ashraful Islam <!-- -
+  <a href="#__consent">Change cookie settings</a>-->
 
 theme:
   name: material
@@ -29,6 +29,8 @@ theme:
       java: fontawesome/brands/java
       cpp: simple/cplusplus
       nodejs: fontawesome/brands/node-js
+      reflection: material/thought-bubble
+      mkdocs: simple/materialformkdocs
       
   #   logo: logo
   features:
@@ -180,8 +182,9 @@ extra:
     Go: go
     Java: java
     Node.js: nodejs
+    Reflection: reflection
+    MkDocs: mkdocs
 
-      
   # analytics:
   #     provider: google
   #     property: G-73LKLZCSB2
@@ -199,6 +202,7 @@ extra:
   #           note: >- 
   #             Thanks for your feedback! Help us improve this page by
   #             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  # feedback_form: true
   # consent:
   #   title: Cookie consent
   #   description: >- 
